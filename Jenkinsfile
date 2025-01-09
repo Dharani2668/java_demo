@@ -2,9 +2,9 @@
 def img
 pipeline {
     environment {
-        registry = "saigundavarapu/java" //To push an image to Docker Hub, you must first name your local image using your Docker Hub username and the repository name that you created through Docker Hub on the web.
+        registry = "dharanibishoyi/java_demo" //To push an image to Docker Hub, you must first name your local image using your Docker Hub username and the repository name that you created through Docker Hub on the web.
         registryCredential = 'DOCKERHUB'
-        githubCredential = 'Github'
+        githubCredential = 'GITHUB'
         dockerImage = ''
     }
     agent any
@@ -14,7 +14,7 @@ pipeline {
                 steps {
                 git branch: 'main',
                 credentialsId: githubCredential,
-                url: 'https://github.com/78sai44/java-project.git'
+                url: 'https://github.com/Dharani2668/java_demo.git'
                 }
         }
        
